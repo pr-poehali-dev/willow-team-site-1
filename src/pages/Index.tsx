@@ -51,6 +51,11 @@ const ROSTER = [
 
 const ACHIEVEMENTS = [
   { year: "2025", place: "🥇 1 место", event: "Miracle Cup — Чемпионы", prize: "" },
+  { year: "2025", place: "🥈 2 место", event: "AEL Whiteout", prize: "" },
+  { year: "2025", place: "🥈 2 место", event: "ROFLOTOURS1", prize: "" },
+  { year: "2025", place: "🥉 3 место", event: "ANGEL TOURNAMENTS", prize: "" },
+  { year: "2025", place: "🥉 3 место", event: "Volt Series", prize: "" },
+  { year: "2025", place: "⚔️ 1/4 финала", event: "MLT TOURNAMENTS", prize: "" },
 ];
 
 export default function Index() {
@@ -341,8 +346,8 @@ export default function Index() {
             <div className="mt-12 grid grid-cols-3 gap-4">
               {[
                 { num: "1", label: "ЗОЛОТО" },
-                { num: "0", label: "СЕРЕБРА" },
-                { num: "0", label: "БРОНЗЫ" },
+                { num: "2", label: "СЕРЕБРА" },
+                { num: "2", label: "БРОНЗЫ" },
               ].map((s) => (
                 <div key={s.label} className="border border-white/[0.06] p-6 text-center animate-glow">
                   <div className="font-['Oswald'] text-5xl font-bold text-white">{s.num}</div>
