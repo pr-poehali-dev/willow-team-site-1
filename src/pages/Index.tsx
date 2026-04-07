@@ -31,13 +31,14 @@ const NEWS = [
     tag: "РЕГИСТРАЦИЯ",
     title: "Willow Team зарегистрировалась на Major Pental Willow 2026",
     text: "Мы официально подали заявку на участие в Major Pental Willow 2026. Готовимся серьёзно — впереди большая работа.",
+    link: "https://t.me/WillowPentalMajor2026tier6",
   },
 ];
 
 const ROSTER = [
   { nick: "dan11l", name: "Даниил", role: "Капитан / IGL", number: "01", kd: "0.93", avg: "15", kdGood: false },
-  { nick: "whysonk1", name: "Степан", role: "Снайпер / Sniper", number: "02", kd: "0.99", avg: "14", kdGood: false },
-  { nick: "kismain", name: "Денис", role: "Люркер / Lurker", number: "03", kd: "1.00", avg: "15", kdGood: true },
+  { nick: "whysonk1", name: "Степан", role: "Снайпер / Sniper", number: "02", kd: "1.09", avg: "14", kdGood: true },
+  { nick: "kismain", name: "Денис", role: "Люркер / Lurker", number: "03", kd: "1.05", avg: "15", kdGood: true },
   { nick: "Makl0n", name: "Максим", role: "Рифлер / Rifler", number: "04", kd: "1.00", avg: "15", kdGood: true },
   { nick: "xyesospeek", name: "Дима", role: "Ентри / Entry", number: "05", kd: "0.89", avg: "13", kdGood: false },
 ];
@@ -64,10 +65,11 @@ export default function Index() {
         <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 border border-white/20 rotate-45 flex items-center justify-center">
-              <div className="w-3 h-3 bg-white rotate-0" />
-            </div>
-            <span className="font-['Oswald'] text-xl tracking-[0.2em] font-medium">WILLOW TEAM</span>
+            <img
+              src="https://cdn.poehali.dev/files/4d2f737a-6f31-4d14-ad58-dc021d7d4b9a.png"
+              alt="Willow Team"
+              className="h-10 w-auto object-contain"
+            />
           </div>
 
           {/* Desktop Nav */}
@@ -222,7 +224,7 @@ export default function Index() {
               {NEWS.map((n, i) => (
                 <article
                   key={i}
-                  className="border border-white/[0.08] p-6 cursor-pointer group animate-fade-in hover:border-white/20 transition-colors"
+                  className="border border-white/[0.08] p-6 group animate-fade-in hover:border-white/20 transition-colors"
                   style={{ animationDelay: `${i * 0.08}s`, opacity: 0, animationFillMode: 'forwards' }}
                 >
                   <div className="flex items-center gap-3 mb-4">
@@ -235,10 +237,22 @@ export default function Index() {
                     {n.title}
                   </h3>
                   <p className="text-white/40 text-sm leading-relaxed">{n.text}</p>
-                  <div className="mt-4 flex items-center gap-2 text-white/25 group-hover:text-white/60 transition-colors">
-                    <span className="font-['Oswald'] text-xs tracking-[0.15em]">ЧИТАТЬ</span>
-                    <Icon name="ArrowRight" size={12} />
-                  </div>
+                  {n.link ? (
+                    <a
+                      href={n.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-flex items-center gap-2 text-white/40 hover:text-white transition-colors cursor-pointer"
+                    >
+                      <span className="font-['Oswald'] text-xs tracking-[0.15em]">ЧИТАТЬ В TELEGRAM</span>
+                      <Icon name="ExternalLink" size={12} />
+                    </a>
+                  ) : (
+                    <div className="mt-4 flex items-center gap-2 text-white/25 group-hover:text-white/60 transition-colors">
+                      <span className="font-['Oswald'] text-xs tracking-[0.15em]">ЧИТАТЬ</span>
+                      <Icon name="ArrowRight" size={12} />
+                    </div>
+                  )}
                 </article>
               ))}
             </div>
@@ -347,6 +361,7 @@ export default function Index() {
                 { label: "Telegram", icon: "Send", href: "https://t.me/WillowTeamCS2", handle: "t.me/WillowTeamCS2", desc: "Новости и анонсы" },
                 { label: "YouTube", icon: "Play", href: "https://www.youtube.com/@willowteamcs2", handle: "youtube.com/@willowteamcs2", desc: "Хайлайты и VOD" },
                 { label: "TikTok", icon: "Music", href: "https://www.tiktok.com/@willowteamcs", handle: "tiktok.com/@willowteamcs", desc: "Клипы и шорты" },
+                { label: "Twitch", icon: "Tv", href: "https://www.twitch.tv/willowteamcs2", handle: "twitch.tv/willowteamcs2", desc: "Прямые трансляции" },
               ].map((s, i) => (
                 <a
                   key={s.label}
