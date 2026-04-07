@@ -21,6 +21,12 @@ const SOCIALS = [
 
 const NEWS = [
   {
+    date: "07 APR 2026",
+    tag: "ПАРТНЁРСТВО",
+    title: "Willow Team сотрудничает с Tuimada Team",
+    text: "Рады объявить о партнёрстве с командой Tuimada Team. Вместе мы будем развивать сцену и поддерживать друг друга в подготовке к турнирам.",
+  },
+  {
     date: "06 APR 2026",
     tag: "ТУРНИР",
     title: "Вылетели из Willow CUP",
