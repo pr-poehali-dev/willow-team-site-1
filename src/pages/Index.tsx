@@ -392,7 +392,9 @@ export default function Index() {
                 По вопросам спонсорства, партнёрства и организации матчей — пишите нам напрямую.
               </p>
               <a
-                href="mailto:contact@willowteam.gg"
+                href="https://t.me/st1menx"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-8 py-3 bg-white text-black font-['Oswald'] text-sm tracking-[0.15em] hover:bg-white/90 transition-all"
               >
                 НАПИСАТЬ НАМ
