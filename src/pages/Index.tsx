@@ -51,11 +51,11 @@ const ROSTER = [
 
 const ACHIEVEMENTS = [
   { year: "2025", place: "🥇 1 место", event: "Miracle Cup — Чемпионы", prize: "" },
-  { year: "2025", place: "🥈 2 место", event: "AEL Whiteout", prize: "" },
-  { year: "2025", place: "🥈 2 место", event: "ROFLOTOURS1", prize: "" },
-  { year: "2025", place: "🥉 3 место", event: "ANGEL TOURNAMENTS", prize: "" },
-  { year: "2025", place: "🥉 3 место", event: "Volt Series", prize: "" },
-  { year: "2025", place: "⚔️ 1/4 финала", event: "MLT TOURNAMENTS", prize: "" },
+  { year: "30 дек 2025", place: "🥈 2 место", event: "AEL Whiteout", prize: "" },
+  { year: "27 дек 2025", place: "🥉 3 место", event: "Volt Series", prize: "" },
+  { year: "8 янв 2026", place: "⚔️ 1/4 финала", event: "MLT TOURNAMENTS", prize: "" },
+  { year: "12 янв 2026", place: "🥈 2 место", event: "ROFLOTOURS1", prize: "" },
+  { year: "29 янв 2026", place: "🥉 3 место", event: "ANGEL TOURNAMENTS", prize: "" },
 ];
 
 export default function Index() {
