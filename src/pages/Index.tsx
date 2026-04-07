@@ -150,7 +150,7 @@ export default function Index() {
               <div className="max-w-6xl mx-auto px-6 py-24 relative z-10 w-full">
                 <div className="max-w-3xl">
                   <p className="font-['Oswald'] text-xs tracking-[0.4em] text-white/30 mb-6 animate-fade-in">
-                    ОСНОВАНА В 2024 · РОССИЯ
+                    ОСНОВАНА В 2025 · РОССИЯ
                   </p>
                   <h1 className="font-['Oswald'] text-[clamp(3rem,10vw,8rem)] leading-[0.9] font-bold uppercase mb-8 animate-fade-in delay-100">
                     <span className="block gradient-text">WILLOW</span>
@@ -179,9 +179,9 @@ export default function Index() {
                 <div className="flex flex-wrap gap-12 mt-20 animate-fade-in delay-400">
                   {[
                     { num: "5", label: "ИГРОКОВ" },
-                    { num: "6", label: "ТРОФЕЕВ" },
-                    { num: "2", label: "ГОДА" },
-                    { num: "TOP 3", label: "РЕГИОНА" },
+                    { num: "1", label: "ТРОФЕЙ" },
+                    { num: "1", label: "ГОД" },
+                    { num: "TOP 20", label: "РЕГИОНА" },
                   ].map((s) => (
                     <div key={s.label}>
                       <div className="font-['Oswald'] text-4xl font-bold text-white">{s.num}</div>
@@ -205,7 +205,7 @@ export default function Index() {
                     НАША ИСТОРИЯ
                   </h2>
                   <p className="text-white/50 leading-relaxed mb-4">
-                    Willow Team была основана в 2024 году командой единомышленников, объединённых страстью к соревновательному гемингу и желанием достигать новых высот.
+                    Willow Team была основана в 2025 году командой единомышленников, объединённых страстью к соревновательному гемингу и желанием достигать новых высот.
                   </p>
                   <p className="text-white/50 leading-relaxed">
                     За короткое время мы прошли путь от новичков регионального дивизиона до одной из ведущих команд, завоевав несколько значимых титулов и репутацию непредсказуемого соперника.
