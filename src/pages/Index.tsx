@@ -21,46 +21,29 @@ const SOCIALS = [
 
 const NEWS = [
   {
-    date: "05 APR 2026",
+    date: "06 APR 2026",
     tag: "ТУРНИР",
-    title: "Willow Team вышла в финал регионального чемпионата",
-    text: "После серии напряжённых матчей команда обеспечила себе место в финале весеннего сезона.",
+    title: "Вылетели из Willow CUP",
+    text: "6 апреля команда выбыла из турнира Willow CUP. Это был тяжёлый, но важный опыт — разберём ошибки и вернёмся сильнее.",
   },
   {
-    date: "28 MAR 2026",
-    tag: "СОСТАВ",
-    title: "Новый игрок присоединился к основному ростеру",
-    text: "Рады представить нашего нового участника — опытного стратега с многолетним стажем.",
-  },
-  {
-    date: "15 MAR 2026",
-    tag: "СОБЫТИЕ",
-    title: "Willow Team на открытии сезона 2026",
-    text: "Команда приняла участие в торжественном открытии соревновательного сезона.",
-  },
-  {
-    date: "01 MAR 2026",
-    tag: "ТРЕНИРОВКИ",
-    title: "Обновление тренировочного расписания на весну",
-    text: "Тренерский штаб представил новый план подготовки с акцентом на командное взаимодействие.",
+    date: "07 APR 2026",
+    tag: "РЕГИСТРАЦИЯ",
+    title: "Willow Team зарегистрировалась на Major Pental Willow 2026",
+    text: "Мы официально подали заявку на участие в Major Pental Willow 2026. Готовимся серьёзно — впереди большая работа.",
   },
 ];
 
 const ROSTER = [
-  { nick: "ShadowBark", name: "Алексей Воронов", role: "Капитан / IGL", number: "01" },
-  { nick: "WillowRoot", name: "Дмитрий Сорокин", role: "Снайпер", number: "02" },
-  { nick: "GreenVeil", name: "Кирилл Лебедев", role: "Поддержка", number: "03" },
-  { nick: "BranchBlade", name: "Максим Фёдоров", role: "Атака", number: "04" },
-  { nick: "MossWarden", name: "Иван Громов", role: "Фланг", number: "05" },
+  { nick: "dan11l", name: "Даниил", role: "Капитан / IGL", number: "01", kd: "0.93", avg: "15", kdGood: false },
+  { nick: "whysonk1", name: "Степан", role: "Снайпер / Sniper", number: "02", kd: "0.99", avg: "14", kdGood: false },
+  { nick: "kismain", name: "Денис", role: "Люркер / Lurker", number: "03", kd: "1.00", avg: "15", kdGood: true },
+  { nick: "Makl0n", name: "Максим", role: "Рифлер / Rifler", number: "04", kd: "1.00", avg: "15", kdGood: true },
+  { nick: "xyesospeek", name: "Дима", role: "Ентри / Entry", number: "05", kd: "0.89", avg: "13", kdGood: false },
 ];
 
 const ACHIEVEMENTS = [
-  { year: "2026", place: "🥇 1 место", event: "Весенний региональный чемпионат", prize: "150 000 ₽" },
-  { year: "2025", place: "🥈 2 место", event: "Национальная лига — Осень", prize: "80 000 ₽" },
-  { year: "2025", place: "🥇 1 место", event: "Открытый кубок города", prize: "60 000 ₽" },
-  { year: "2025", place: "🥉 3 место", event: "Летний инвитэшнл", prize: "30 000 ₽" },
-  { year: "2024", place: "🥇 1 место", event: "Дебютный сезон — Дивизион B", prize: "25 000 ₽" },
-  { year: "2024", place: "🥈 2 место", event: "Региональный квалификатор", prize: "15 000 ₽" },
+  { year: "2025", place: "🥇 1 место", event: "Miracle Cup — Чемпионы", prize: "" },
 ];
 
 export default function Index() {
@@ -273,23 +256,36 @@ export default function Index() {
               {ROSTER.map((p, i) => (
                 <div
                   key={p.nick}
-                  className="border border-white/[0.06] p-6 flex items-center gap-6 cursor-pointer group animate-fade-in hover:border-white/20 transition-colors"
+                  className="border border-white/[0.06] p-5 flex items-center gap-5 group animate-fade-in hover:border-white/20 transition-colors"
                   style={{ animationDelay: `${i * 0.08}s`, opacity: 0, animationFillMode: 'forwards' }}
                 >
-                  <span className="font-['Oswald'] text-4xl font-bold text-white/[0.06] w-14 flex-shrink-0 group-hover:text-white/15 transition-colors">
+                  <span className="font-['Oswald'] text-3xl font-bold text-white/[0.06] w-12 flex-shrink-0 group-hover:text-white/15 transition-colors">
                     {p.number}
                   </span>
-                  <div className="w-12 h-12 border border-white/10 flex items-center justify-center flex-shrink-0 group-hover:border-white/30 transition-colors">
-                    <Icon name="User" size={20} className="text-white/30" />
+                  <div className="w-11 h-11 border border-white/10 flex items-center justify-center flex-shrink-0 group-hover:border-white/30 transition-colors">
+                    <Icon name="User" size={18} className="text-white/30" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <div className="font-['Oswald'] text-2xl font-medium tracking-wide group-hover:text-white transition-colors">
+                    <div className="font-['Oswald'] text-xl font-medium tracking-wide group-hover:text-white transition-colors">
                       {p.nick}
                     </div>
-                    <div className="text-white/35 text-sm mt-0.5">{p.name}</div>
+                    <div className="text-white/35 text-xs mt-0.5">{p.name}</div>
                   </div>
-                  <div className="hidden sm:block font-['Oswald'] text-xs tracking-[0.15em] text-white/25 px-4 py-1.5 border border-white/[0.08]">
+                  <div className="hidden sm:block font-['Oswald'] text-xs tracking-[0.12em] text-white/25 px-3 py-1 border border-white/[0.08]">
                     {p.role}
+                  </div>
+                  {/* Stats */}
+                  <div className="flex items-center gap-4 ml-2">
+                    <div className="text-center">
+                      <div className={`font-['Oswald'] text-lg font-bold ${p.kdGood ? "text-green-400" : "text-red-400"}`}>
+                        {p.kd}
+                      </div>
+                      <div className="font-['Oswald'] text-[9px] tracking-[0.15em] text-white/25">KD</div>
+                    </div>
+                    <div className="text-center">
+                      <div className="font-['Oswald'] text-lg font-bold text-white/70">{p.avg}</div>
+                      <div className="font-['Oswald'] text-[9px] tracking-[0.15em] text-white/25">AVG</div>
+                    </div>
                   </div>
                 </div>
               ))}
@@ -324,9 +320,9 @@ export default function Index() {
             {/* Summary */}
             <div className="mt-12 grid grid-cols-3 gap-4">
               {[
-                { num: "3", label: "ЗОЛОТА" },
-                { num: "2", label: "СЕРЕБРА" },
-                { num: "1", label: "БРОНЗА" },
+                { num: "1", label: "ЗОЛОТО" },
+                { num: "0", label: "СЕРЕБРА" },
+                { num: "0", label: "БРОНЗЫ" },
               ].map((s) => (
                 <div key={s.label} className="border border-white/[0.06] p-6 text-center animate-glow">
                   <div className="font-['Oswald'] text-5xl font-bold text-white">{s.num}</div>
@@ -348,12 +344,9 @@ export default function Index() {
             {/* Social links */}
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-16">
               {[
-                { label: "ВКонтакте", icon: "Share2", href: "#", handle: "@willowteam", desc: "Официальная группа" },
-                { label: "Telegram", icon: "Send", href: "#", handle: "t.me/willowteam", desc: "Новости и анонсы" },
-                { label: "YouTube", icon: "Play", href: "#", handle: "youtube.com/@willow", desc: "Хайлайты и VOD" },
-                { label: "Twitch", icon: "Tv", href: "#", handle: "twitch.tv/willowteam", desc: "Прямые трансляции" },
-                { label: "Discord", icon: "MessageSquare", href: "#", handle: "discord.gg/willow", desc: "Сообщество" },
-                { label: "Email", icon: "Mail", href: "mailto:contact@willowteam.gg", handle: "contact@willowteam.gg", desc: "Для предложений" },
+                { label: "Telegram", icon: "Send", href: "https://t.me/WillowTeamCS2", handle: "t.me/WillowTeamCS2", desc: "Новости и анонсы" },
+                { label: "YouTube", icon: "Play", href: "https://www.youtube.com/@willowteamcs2", handle: "youtube.com/@willowteamcs2", desc: "Хайлайты и VOD" },
+                { label: "TikTok", icon: "Music", href: "https://www.tiktok.com/@willowteamcs", handle: "tiktok.com/@willowteamcs", desc: "Клипы и шорты" },
               ].map((s, i) => (
                 <a
                   key={s.label}
