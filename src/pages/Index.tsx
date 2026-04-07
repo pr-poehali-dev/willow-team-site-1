@@ -50,7 +50,7 @@ const ROSTER = [
 ];
 
 const ACHIEVEMENTS = [
-  { year: "2025", place: "🥇 1 место", event: "Miracle Cup — Чемпионы", prize: "" },
+  { year: "29 фев 2026", place: "🥇 1 место", event: "Miracle Cup — Чемпионы", prize: "" },
   { year: "30 дек 2025", place: "🥈 2 место", event: "AEL Whiteout", prize: "" },
   { year: "27 дек 2025", place: "🥉 3 место", event: "Volt Series", prize: "" },
   { year: "8 янв 2026", place: "⚔️ 1/4 финала", event: "MLT TOURNAMENTS", prize: "" },
